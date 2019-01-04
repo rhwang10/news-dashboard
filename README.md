@@ -1,4 +1,13 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Intro
+
+Small React app to display news trends, integrated with the New York Times developer API.
+
+# Dependencies
+- `react-trend`(https://unsplash.github.io/react-trend/)
+- `axios`
+
+# Cloning the repo
+Make sure to insert your own secret developer key in a `config.js` file inside `~/src/configs`. The template name is `config.js.dist`, you can copy all of the contents there into a new file `config.js`, then replace the secret key field with your own.
 
 ## Available Scripts
 
