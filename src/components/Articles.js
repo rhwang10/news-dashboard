@@ -20,7 +20,7 @@ class Articles extends React.Component {
   render() {
 
     return (
-      <div class="articles_total">
+      <div class="articles__total">
         { this.state && this.state.articles &&
           this.state.articles.map((article, index) => <ArticleCard key={index} article={article}/>)
         }

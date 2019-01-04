@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import Articles from './components/Articles'
+import CustomTrend from './components/CustomTrend'
 
 
 class App extends Component {
@@ -10,8 +11,11 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <Articles></Articles>
+          <CustomTrend/>
         </header>
+        <body>
+          <Articles></Articles>
+        </body>
       </div>
     );
   }

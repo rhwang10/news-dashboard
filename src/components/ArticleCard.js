@@ -10,8 +10,8 @@ class ArticleCard extends React.Component {
     const articleData = this.props.article
 
     return (
-      <div class="articleCard">
-        <div class="articleCard_details">
+      <div class="articlecard">
+        <div class="articlecard__details">
           {articleData.abstract}
         </div>
       </div>
