@@ -1,0 +1,6 @@
+config = {
+  NYT_TOP_API_URL = 'https://api.nytimes.com/svc/topstories/v2',
+  NYT_API_KEY = ''
+}
+
+export {config};
