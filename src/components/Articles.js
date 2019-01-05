@@ -13,6 +13,7 @@ class Articles extends React.Component {
     axios.get(`${config.NYT_TOP_API_URL}/national.json?api-key=${config.NYT_API_KEY}`)
       .then(response => {
         const articles = response.data.results
+        // console.log(articles)
         this.setState({ articles })
       })
   }
@@ -20,7 +21,7 @@ class Articles extends React.Component {
   render() {
 
     return (
-      <div class="articles__total">
+      <div class="articles-total">
         { this.state && this.state.articles &&
           this.state.articles.map((article, index) => <ArticleCard key={index} article={article}/>)
         }
