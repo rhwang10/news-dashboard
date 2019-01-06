@@ -13,6 +13,7 @@ class Articles extends React.Component {
     axios.get(`${config.NYT_TOP_API_URL}/${this.props.sectionName}.json?api-key=${config.NYT_API_KEY}`)
       .then(response => {
         const articles = response.data.results
+        console.log(articles)
         this.setState({ articles })
       }).catch(error => {
         console.log(error)

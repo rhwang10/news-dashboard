@@ -13,8 +13,6 @@ class ArticlePage extends Component {
   }
 
   componentDidMount() {
-    // const { match: { params } } = this.props
-    // const sectionName = params.sectionName
     const sectionName = this.props.section
     this.setState({ sectionName })
   }

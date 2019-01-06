@@ -43,9 +43,6 @@ class ArticleCard extends React.Component {
                     Link
                   </Button>
                 </a>
-                <Button size="small" color="secondary">
-                  Learn More
-                </Button>
               </CardActions>
             </div>
           </Card>

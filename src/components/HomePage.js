@@ -94,6 +94,7 @@ class HomePage extends React.Component {
 
   render() {
     const { value, suggestions, redirect } = this.state
+    const classes = this.state.redirect ? 'articleShow' : 'articleHide'
 
     const inputProps = {
       placeholder: "Search for a section",
@@ -121,7 +122,7 @@ class HomePage extends React.Component {
             </div>
           </div>
         </header>
-        <div class="article-content">
+        <div class={classes}>
           { redirect && value &&
             <ArticlePage section={value} />
           }

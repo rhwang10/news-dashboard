@@ -1,24 +1,36 @@
-header {
+.app-content header {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
 }
 
 header h1 {
   font-size: 3rem;
 }
 
-body {
-  font-family: Helvetica, sans-serif;
-}
-
-.homepage header {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-
-.homepage header .homepage-content {
+.homepage-content {
   margin-left: 50px;
+  margin-right: 50px;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.articleShow {
+  animation: fadein 3s;
+  -moz-animation: fadein 3s; /* Firefox */
+  -webkit-animation: fadein 3s; /* Safari and Chrome */
+  -o-animation: fadein 3s; /* Opera */
 }
 
 .react-autosuggest__container {
@@ -27,25 +39,37 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .react-autosuggest__input {
-  width: 500px;
+  width: 600px;
   height: 50px;
   border-radius: 25px;
   background: transparent;
   color: white;
   font-size: 1rem;
+  padding-left: 10px;
 }
 
 .react-autosuggest__input--focused {
   outline: none;
 }
 
-.react-autosuggest__input--open {
-  /* border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0; */
+::-webkit-input-placeholder {
+   text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;
+}
+
+:-ms-input-placeholder {
+   text-align: center;
 }
 
 .react-autosuggest__suggestions-container {
@@ -55,7 +79,7 @@ body {
 .react-autosuggest__suggestions-container--open {
   display: block;
   position: absolute;
-  width: 500px;
+  width: 600px;
   top: 55px;
   border: 1px solid #aaa;
   background-color: #fff;
