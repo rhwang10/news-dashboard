@@ -1,8 +1,9 @@
 import React from 'react'
 import axios from 'axios'
 import { config } from '../configs/config'
-
 import ArticleCard from './ArticleCard'
+
+require('dotenv').config()
 
 class Articles extends React.Component {
   state = {
@@ -10,7 +11,10 @@ class Articles extends React.Component {
   }
 
   componentDidMount() {
-    axios.get(`${config.NYT_TOP_API_URL}/${this.props.sectionName}.json?api-key=${config.NYT_API_KEY}`)
+    const api_key = process.env.NYT_API_KEY
+    const api_url = process.env.NYT_TOP_API_URL
+    
+    axios.get(`${api_url}/${this.props.sectionName}.json?api-key=${api_key}`)
       .then(response => {
         const articles = response.data.results
         console.log(articles)
