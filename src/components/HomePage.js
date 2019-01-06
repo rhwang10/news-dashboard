@@ -122,11 +122,33 @@ class HomePage extends React.Component {
             </div>
           </div>
         </header>
-        <div class={classes}>
-          { redirect && value &&
-            <ArticlePage section={value} />
-          }
-        </div>
+        <main class="homepage-articles">
+          <div class={classes}>
+            { redirect && value &&
+              <ArticlePage section={value} />
+            }
+          </div>
+        </main>
+        <footer>
+          <div class="footer-credits">
+            Built and maintained in 2019 by Robert Hwang
+          </div>
+          <div class="footer-links">
+            <a href="https://github.com/rhwang10">
+              <span class="link">Personal GitHub</span>
+            </a>
+            <a href="https://github.com/rhwang10/news-dashboard">
+              <span class="link">
+                Project GitHub
+              </span>
+            </a>
+            <a href="https://rhwang10.github.io/">
+              <span class="link">
+                My Portfolio
+              </span>
+            </a>
+          </div>
+        </footer>
       </div>
     )
   }

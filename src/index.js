@@ -13,9 +13,7 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <Router>
-    <div class="global">
-      <Route exact path="/" component={App} />
-    </div>
+    <Route exact path="/" component={App} />
   </Router>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
