@@ -13,22 +13,18 @@ class ArticlePage extends Component {
   }
 
   componentDidMount() {
-    const { match: { params } } = this.props
-    const sectionName = params.sectionName
+    // const { match: { params } } = this.props
+    // const sectionName = params.sectionName
+    const sectionName = this.props.section
     this.setState({ sectionName })
   }
 
   render () {
     return (
       <div className="article-page">
-        <header className="article-page-header">
-          <CustomTrend/>
-        </header>
-        <body>
         { this.state && this.state.sectionName &&
           <Articles sectionName={this.state.sectionName}></Articles>
         }
-        </body>
       </div>
     );
   }

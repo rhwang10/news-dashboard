@@ -14,6 +14,8 @@ class Articles extends React.Component {
       .then(response => {
         const articles = response.data.results
         this.setState({ articles })
+      }).catch(error => {
+        console.log(error)
       })
   }
 
