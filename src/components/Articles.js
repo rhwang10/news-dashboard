@@ -10,10 +10,9 @@ class Articles extends React.Component {
   }
 
   componentDidMount() {
-    axios.get(`${config.NYT_TOP_API_URL}/national.json?api-key=${config.NYT_API_KEY}`)
+    axios.get(`${config.NYT_TOP_API_URL}/${this.props.sectionName}.json?api-key=${config.NYT_API_KEY}`)
       .then(response => {
         const articles = response.data.results
-        // console.log(articles)
         this.setState({ articles })
       })
   }

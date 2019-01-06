@@ -1,16 +1,13 @@
-.App {
+.article-page {
   /* text-align: center; */
   background-color: rgba(25,25,25,1);
   color: rgb(255,255,255);
 
 }
 
-.App-header {
+.article-page-header {
   min-height: 50vh;
   display: flex;
-  /* flex-direction: column; */
-  /* align-items: center; */
-  /* justify-content: center; */
   font-size: calc(10px + 2vmin);
 }
 
@@ -22,24 +19,25 @@
   align-content: space-evenly;
 }
 
+.homepage .search {
+  margin-top:100px;
+  margin-bottom: 100px;
+}
+
 .articles-total .article-card {
   margin-top: 50px;
   margin-bottom: 50px;
-  max-width: 345px;
+  max-width: 300px;
 }
 
 .articles-total .article-card .article-card-image {
-  width: 100%
+  height: auto;
+  width: auto;
+  max-height: 400px;
+  max-width: 350px;
 }
-/* .App-link {
-  color: #61dafb;
-} */
-/*
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
+
+.articles-total .article-card .article-card-content {
+  height: auto;
+  /* max-height: 200px; */
+}
