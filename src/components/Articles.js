@@ -11,8 +11,8 @@ class Articles extends React.Component {
   }
 
   componentDidMount() {
-    const api_key = process.env.NYT_API_KEY
-    const api_url = process.env.NYT_TOP_API_URL
+    const api_key = process.env.REACT_APP_NYT_API_KEY
+    const api_url = process.env.REACT_APP_NYT_TOP_API_URL
 
     axios.get(`${api_url}/${this.props.sectionName}.json?api-key=${api_key}`)
       .then(response => {
